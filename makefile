@@ -13,9 +13,13 @@ install-cdk:
 	@sudo npm install -g aws-cdk@latest
 
 
-# CDK Deploy command
+# CDK Infrastructure as Code
 deploy:
 	@poetry run cdk deploy $(APPLICATION_STACK_NAME)
+destroy:
+	@poetry run cdk destroy $(APPLICATION_STACK_NAME)
+diff:
+	@poetry run cdk diff $(APPLICATION_STACK_NAME)
 
 # Ruff linting command
 lint:
