@@ -10,14 +10,47 @@ python = "^3.11"
 aws-cdk-lib = "^2.149.0"
 constructs = "^10.3.0"
 aws-cdk-aws-lambda-python-alpha = "^2.149.0a0"
-
+pydantic-settings = "^2.4.0"
 
 [tool.poetry.group.dev.dependencies]
 pydantic-settings = "^2.3.4"
 aws-lambda-powertools = {extras = ["tracer"], version = "^2.41.0"}
 mypy-boto3-dynamodb = "^1.34.148"
 boto3 = "^1.34.159"
+ruff = "^0.6.2"
+codespell = "^2.3.0"
+bandit = "^1.7.9"
+mypy = "^1.11.2"
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.bandit]
+exclude_dirs = ['*_test.py', '**/**/test_*.py', "**tests.py"]
+
+[tool.codespell]
+skip = '*.vscode,*codeseeder.out,*cdk.out,*poetry.lock'
+count = ''
+quiet-level = 3
+exclude = ''
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+select = [
+    # Pyflakes
+    "F",
+    # Pycodestyle
+    "E",
+    "W",
+    # isort
+    "I001"
+]
+# select = ["E4", "E7", "E9", "F", "S"]
+
+[tool.ruff.lint.per-file-ignores]
+"**/tests/*.py" = [
+    "S101", # asserts allowed in tests...
+]
