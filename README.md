@@ -22,7 +22,7 @@ This repository hosts the demo code for the PyCon PL 2024 talk "AWS Lambda Power
 
 ## Authors
 
-> [Krzysztof Wilczyński](mailto:krzysztof.wilczynski@pm.me) & [Mateusz Zaremba](mailto:matez@orsted.com)
+> [Krzysztof Wilczyński](https://www.linkedin.com/in/3sztof/) & [Mateusz Zaremba](https://www.linkedin.com/in/mateusz-zaremba/)
 
 ## Purpose
 
